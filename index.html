@@ -360,7 +360,7 @@
 
 
   <!-- company logo list section -> flex mode -> 6 logos in a row -->
-  <section class="w-full px-5 py-8 mb-10">
+  <section class="w-full px-5 py-8">
     <div class="container mx-auto">
       <div class="flex justify-center gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth pb-4">
         <div>
@@ -543,14 +543,170 @@
   <!-- case study section -->
   <!-- A list and grid images display section here -->
 
+  <section class="max-w-7xl mx-auto py-20 px-6 flex flex-col lg:flex-row items-start gap-12">
+    <!-- Left Column -->
+    <div class="lg:w-1/6">
+      <h2 class="text-5xl font-extrabold text-blue-600 whitespace-nowrap">Case <br> Studies</h2>
+      <div class="flex flex-col gap-3 mt-6 w-fit">
+        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
+          data-category="all">All</button>
+        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
+          data-category="corporate">Corporate</button>
+        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
+          data-category="advertising">Advertising</button>
+        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
+          data-category="marketing">Marketing</button>
+        <button class="btn-case px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors duration-200"
+          data-category="government">Government</button>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="lg:w-5/6 w-full">
+      <div class="grid grid-cols-2 grid-rows-3 gap-4 h-[400px]">
+        <div class="row-span-2 relative overflow-hidden rounded-lg h-full">
+          <img src="https://picsum.photos/600/400?random=1" class="w-full h-full object-cover brightness-75">
+          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-trom-black/60">
+            <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
+            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden rounded-lg h-full">
+          <img src="https://picsum.photos/600/400?random=2" class="w-full h-full object-cover brightness-75">
+          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-t from-black/60">
+            <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
+            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+          </div>
+        </div>
+        <div class="col-start-2 relative overflow-hidden rounded-lg h-full">
+          <img src="https://picsum.photos/600/400?random=3" class="w-full h-full object-cover brightness-75">
+          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-trom-black/60">
+            <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
+            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+          </div>
+        </div>
+        <div class="col-start-2 row-start-3 relative overflow-hidden rounded-lg h-full">
+          <img src="https://picsum.photos/600/400?random=4" class="w-full h-full object-cover brightness-75">
+          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-t from-black/60">
+            <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
+            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+          </div>
+        </div>
+        <div class="col-start-1 row-start-3 relative overflow-hidden rounded-lg h-full">
+          <img src="https://picsum.photos/600/400?random=5" class="w-full h-full object-cover brightness-75">
+          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-t from-black/60">
+            <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
+            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-  <!-- long button section -->
-  <section></section>
+
+
+  <!-- Call-to-action section -->
+  <section class="bg-gradient-to-r from-sky-400 to-sky-600 py-6 px-6 w-4/5 mx-auto rounded-lg">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-center sm:text-left">
+        <h2 class="text-3xl font-semibold text-white mb-1">Let's work together</h2>
+        <p class="text-white text-base">Contact our team today.</p>
+      </div>
+      <button
+        class="bg-white text-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center gap-2 whitespace-nowrap">
+        Write to us
+        <img src="./public/images/android-send.svg" alt="Send icon" class="w-5 h-5" />
+      </button>
+    </div>
+  </section>
+
 
   <!-- footer section -->
-  <section></section>
+  <footer class="bg-white text-black-300 py-20 relative overflow-hidden">
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+
+        <div class="w-full lg:max-w-xs">
+          <div class="flex gap-2  items-center mb-4">
+            <img src="./public/images/Logo.svg" alt="Agency Logo" />
+            <p>Agency</p>
+          </div>
+          <p class="text-sm text-gray-400 mb-6">
+            Nam posuere nulla id orci sed ante blandit, id feugiat elit. amet sed libero.
+          </p>
+          <p class="text-sm text-gray-500">© Skyrer Theme 2020</p>
+        </div>
+
+        <div class="w-full lg:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Company</h3>
+          </div>
+          <div>
+            <h3 class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Services</h3>
+          </div>
+          <div>
+            <h3 class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Resources</h3>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-auto flex flex-col items-start lg:items-end">
+          <div class="flex space-x-3 mb-6">
+            <a href="#"
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-gray-200 text-blue-700 hover:bg-gray-300 transition-colors"
+              aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0Z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-cyan-600 text-white hover:bg-cyan-700 transition-colors"
+              aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5ZM8 19H5V8h3v11ZM6.5 6.5A1.5 1.5 0 1 1 8 5a1.5 1.5 0 0 1-1.5 1.5ZM19 19h-3v-5.5c0-1.32-.03-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92V19H9V8h2.88v1.32h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 1.99 3.59 4.58V19Z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-cyan-600 text-white hover:bg-cyan-700 transition-colors"
+              aria-label="Twitter">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 14.01-7.496 14.01-13.986 0-.213-.005-.426-.015-.638.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full flex items-center justify-center bg-cyan-600 text-white hover:bg-cyan-700 transition-colors"
+              aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.172.053 1.803.248 2.228.413.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.426.36 1.057.413 2.228.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.172-.248 1.803-.413 2.228-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.426.164-1.057.36-2.228.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.172-.053-1.803-.248-2.228-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.426-.36-1.057-.413-2.228-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.172.248-1.803.413-2.228.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.426-.164 1.057-.36 2.228-.413 1.266-.058 1.646-.07 4.85-.07M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.936 3.351.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126s1.338.936 2.126 1.384c.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.261 2.913-.558.788-.306 1.459-.717 2.126-1.384s.936-1.338 1.384-2.126c.296-.765.499-1.636.558-2.913.058-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.261-2.148-.558-2.913-.306-.788-.717-1.459-1.384-2.126S20.649.936 19.861.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="relative">
+            <button
+              class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              <span>English - En</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
