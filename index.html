@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -15,53 +15,82 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="sticky top-0 z-50 w-full bg-white shadow-sm px-5">
-    <div class="flex items-center justify-between py-2 px-4 mx-auto">
+  <nav class="sticky top-0 z-50 w-full bg-white px-5 shadow-sm">
+    <div class="mx-auto flex items-center justify-between px-4 py-2">
       <div class="logo flex items-center gap-1">
         <img src="./public/images/Logo.svg" alt="Agency Logo" />
         <p class="text-xl">Agency</p>
       </div>
 
       <!-- Desktop Menu -->
-      <div class="hidden lg:flex items-center gap-8">
+      <div class="hidden items-center gap-8 lg:flex">
         <ul class="flex items-center justify-between gap-8">
-          <li><a href="#" class="hover:text-blue-600 transition-colors">Home</a></li>
-          <li><a href="#" class="hover:text-blue-600 transition-colors">Services</a></li>
-          <li><a href="#" class="hover:text-blue-600 transition-colors">Our Values</a></li>
-          <li><a href="#" class="hover:text-blue-600 transition-colors">Case Studies</a></li>
-          <li><a href="#" class="hover:text-blue-600 transition-colors">Blog</a></li>
+          <li>
+            <a href="#" class="transition-colors hover:text-blue-600">Home</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors hover:text-blue-600">Services</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors hover:text-blue-600">Our Values</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors hover:text-blue-600">Case Studies</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors hover:text-blue-600">Blog</a>
+          </li>
         </ul>
         <ul class="flex items-center gap-6">
-          <li><a href="#" class="hover:text-blue-600 transition-colors">Login</a></li>
-          <li class="border-r border-gray-300 pr-4"><a href="#"
-              class="hover:text-blue-600 transition-colors">Register</a></li>
-          <li><img src="./public/images/Shape.svg" alt="Settings Icon" class="cursor-pointer" /></li>
+          <li>
+            <a href="#" class="transition-colors hover:text-blue-600">Login</a>
+          </li>
+          <li class="border-r border-gray-300 pr-4">
+            <a href="#" class="transition-colors hover:text-blue-600">Register</a>
+          </li>
+          <li>
+            <img src="./public/images/Shape.svg" alt="Settings Icon" class="cursor-pointer" />
+          </li>
         </ul>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
+      <button id="mobile-menu-button" class="rounded-md p-2 transition-colors hover:bg-gray-100 lg:hidden"
         aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200">
-      <div class="px-4 py-4 space-y-4">
+    <div id="mobile-menu" class="hidden border-t border-gray-200 lg:hidden">
+      <div class="space-y-4 px-4 py-4">
         <ul class="space-y-3">
-          <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Home</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Services</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Our Values</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Case Studies</a></li>
-          <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Blog</a></li>
+          <li>
+            <a href="#" class="block py-2 transition-colors hover:text-blue-600">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 transition-colors hover:text-blue-600">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 transition-colors hover:text-blue-600">Our Values</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 transition-colors hover:text-blue-600">Case Studies</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 transition-colors hover:text-blue-600">Blog</a>
+          </li>
         </ul>
-        <div class="pt-4 border-t border-gray-200">
+        <div class="border-t border-gray-200 pt-4">
           <ul class="space-y-3">
-            <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Login</a></li>
-            <li><a href="#" class="block py-2 hover:text-blue-600 transition-colors">Register</a></li>
+            <li>
+              <a href="#" class="block py-2 transition-colors hover:text-blue-600">Login</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 transition-colors hover:text-blue-600">Register</a>
+            </li>
             <li class="flex items-center gap-2 py-2">
               <img src="./public/images/Shape.svg" alt="Settings Icon" class="cursor-pointer" />
             </li>
@@ -73,81 +102,95 @@
 
   <script>
     // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
   </script>
 
   <!-- Hero Section -->
-  <section class="container mx-auto flex px-5 md:flex-row flex-col items-center">
+  <section class="container mx-auto flex flex-col items-center px-5 md:flex-row">
     <div
-      class="lg:grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Aenean Facilisis Vitae
+      class="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:grow lg:pr-24">
+      <h1 class="title-font mb-4 text-3xl font-medium text-gray-900 sm:text-4xl">
+        Aenean Facilisis Vitae
       </h1>
-      <p class="mb-8 leading-relaxed"> Lorem ipsum dolor sit amet consectetur adipiscing<br> Integer id orci sed ante
-        tincidunt</p>
+      <p class="mb-8 leading-relaxed">
+        Lorem ipsum dolor sit amet consectetur adipiscing<br />
+        Integer id orci sed ante tincidunt
+      </p>
       <div class="flex justify-center">
         <a href=""
-          class="inline-flex items-center text-[#00BCD4] bg-white border border-[#00BCD4] py-2 px-6 focus:outline-none rounded text-lg gap-2">WRITE
+          class="inline-flex items-center gap-2 rounded border border-[#00BCD4] bg-white px-6 py-2 text-lg text-[#00BCD4] focus:outline-none">WRITE
           TO US
-          <img src="./public/images/android-send.svg" alt="Send icon" class="w-5 h-5 bg-white" />
+          <img src="./public/images/android-send.svg" alt="Send icon" class="h-5 w-5 bg-white" />
         </a>
       </div>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/2">
-      <img class="w-full h-auto object-cover object-center rounded" alt="hero" src="./public/images/Artwork.png">
+      <img class="h-auto w-full rounded object-cover object-center" alt="hero" src="./public/images/Artwork.png" />
     </div>
   </section>
 
-
   <!-- Ad section -->
-  <section class="container mx-auto flex px-5 justify-center gap-5 mt-20 mb-20">
+  <section class="container mx-auto mt-20 mb-20 flex justify-center gap-5 px-5">
     <div>
-      <h2 class="border-r border-gray-300 text-2xl font-medium hover:text-[#00BCD4] transition-colors">Buisness
-        Solutions</h2>
-      <p class="border-r border-gray-300 pr-5">Interdum et malesuada fames ac ante…</p>
+      <h2 class="border-r border-gray-300 text-2xl font-medium transition-colors hover:text-[#00BCD4]">
+        Buisness Solutions
+      </h2>
+      <p class="border-r border-gray-300 pr-5">
+        Interdum et malesuada fames ac ante…
+      </p>
     </div>
     <div>
-      <h2 class="border-r border-gray-300 text-2xl font-medium hover:text-[#00BCD4]">Free Project Quote</h2>
-      <p class="border-r border-gray-300 pr-5">Interdum et malesuada fames ac ante…</p>
+      <h2 class="border-r border-gray-300 text-2xl font-medium hover:text-[#00BCD4]">
+        Free Project Quote
+      </h2>
+      <p class="border-r border-gray-300 pr-5">
+        Interdum et malesuada fames ac ante…
+      </p>
     </div>
     <div>
-      <h2 class="text-2xl font-medium hover:text-[#00BCD4]" </h2>Nulla lobortis nunc</h2>
+      <h2 class="text-2xl font-medium hover:text-[#00BCD4]">
+        Nulla lobortis nunc
+      </h2>
       <p>Interdum et malesuada fames ac ante…</p>
     </div>
   </section>
 
-
   <!-- About us section  -->
-  <section class="container mx-auto flex flex-col md:flex-row px-5 w-full gap-8">
-    <div class="w-full md:w-1/2 flex items-center justify-center">
-      <img src="./public/images/About US.png" alt="About us image" class="w-full h-auto" />
+  <section class="container mx-auto flex w-full flex-col gap-8 px-5 md:flex-row">
+    <div class="flex w-full items-center justify-center md:w-1/2">
+      <img src="./public/images/About US.png" alt="About us image" class="h-auto w-full" />
     </div>
 
-    <div class="w-full md:w-1/2 flex flex-col items-center justify-center py-8 md:py-0">
-      <h2 class="text-3xl font-medium mb-5 text-left">Nulla lobortis nunc vitae purus facilisis</h2>
+    <div class="flex w-full flex-col items-center justify-center py-8 md:w-1/2 md:py-0">
+      <h2 class="mb-5 text-left text-3xl font-medium">
+        Nulla lobortis nunc vitae purus facilisis
+      </h2>
       <p class="mb-10 text-left">
-        Vestibulum sit amet tortor libero lobortis semper at et odio. In eu tellus <br>
-        rtellus.
-        Pellentesque ullamcorper ultrices. Aenean facilisis vitae purus <br> facilisis semper.
+        Vestibulum sit amet tortor libero lobortis semper at et odio. In eu
+        tellus <br />
+        rtellus. Pellentesque ullamcorper ultrices. Aenean facilisis vitae
+        purus <br />
+        facilisis semper.
       </p>
-      <div class="flex gap-2 justify-around w-full">
-        <div class="flex flex-col gap-2 items-center justify-center">
+      <div class="flex w-full justify-around gap-2">
+        <div class="flex flex-col items-center justify-center gap-2">
           <p class="text-4xl font-medium">+200</p>
-          <div class="w-16 h-2 bg-sky-400 rounded-full"></div>
+          <div class="h-2 w-16 rounded-full bg-sky-400"></div>
           <p>EMPOLYEES</p>
         </div>
-        <div class="flex flex-col gap-2 items-center justify-center">
+        <div class="flex flex-col items-center justify-center gap-2">
           <p class="text-4xl font-medium">+500</p>
-          <div class="w-16 h-2 bg-sky-400 rounded-full"></div>
+          <div class="h-2 w-16 rounded-full bg-sky-400"></div>
           <p>PROJECTS</p>
         </div>
-        <div class="flex flex-col gap-2 items-center">
+        <div class="flex flex-col items-center gap-2">
           <p class="text-4xl font-medium">+300</p>
-          <div class="w-16 h-2 bg-sky-400 rounded-full"></div>
+          <div class="h-2 w-16 rounded-full bg-sky-400"></div>
           <p>CLIENTS</p>
         </div>
       </div>
@@ -155,96 +198,119 @@
   </section>
 
   <!-- Our Services Section -->
-  <section class="w-full px-5 py-12 bg-cover bg-center bg-no-repeat mb-10"
-    style="background-image: url('./public/images/back1.png');">
+  <section class="mb-10 w-full bg-cover bg-center bg-no-repeat px-5 py-12"
+    style="background-image: url(&quot;./public/images/back1.png&quot;)">
     <div class="container mx-auto">
-      <div class="justify-between flex px-10">
-        <h2 class="text-4xl font-boldmt-10 mb-10">Our Services</h2>
-        <a class="text-sky-950 mt-10 mb-10 font-bold">SEE ALL </a>
+      <div class="flex justify-between px-10">
+        <h2 class="mt-10 mb-10 text-4xl font-bold text-sky-600">
+          Our Services
+        </h2>
+        <a class="mt-10 mb-10 cursor-pointer font-bold text-sky-500">SEE ALL
+        </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-10">
+      <div class="mb-10 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
         <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
-          <img class="w-full h-48 object-cover block m-0 p-0"
+          class="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+          <img class="m-0 block h-48 w-full object-cover p-0"
             src="https://plus.unsplash.com/premium_photo-1667538962342-2d9937f014d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            alt="camera photo">
-          <div class="p-6 flex flex-col grow">
-            <h2 class="text-xl font-semibold mb-3 text-gray-800">Lorem ipsum dolor</h2>
-            <p class="text-gray-600 mb-6 text-sm leading-relaxed grow">Pellentesque ac bibendum tortor, vel blandit
-              nulla. Nulla eget lobortis lacus. Eu aliquam nibh tempus at.</p>
-            <div class="flex justify-center mt-auto">
+            alt="camera photo" />
+          <div class="flex grow flex-col p-6">
+            <h2 class="mb-3 text-xl font-semibold text-gray-800">
+              Lorem ipsum dolor
+            </h2>
+            <p class="mb-6 grow text-sm leading-relaxed text-gray-600">
+              Pellentesque ac bibendum tortor, vel blandit nulla. Nulla eget
+              lobortis lacus. Eu aliquam nibh tempus at.
+            </p>
+            <div class="mt-auto flex justify-center">
               <button
-                class="bg-white border border-blue-900 text-blue-500 px-12 py-2 rounded-md font-medium hover:bg-[#00BCD4] hover:text-white transition-colors uppercase text-sm">See
-                Detail
+                class="rounded-md border border-blue-900 bg-white px-12 py-2 text-sm font-medium text-blue-500 uppercase transition-colors hover:bg-[#00BCD4] hover:text-white">
+                See Detail
               </button>
             </div>
           </div>
         </div>
         <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
-          <img class="w-full h-48 object-cover block m-0 p-0"
+          class="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+          <img class="m-0 block h-48 w-full object-cover p-0"
             src="https://plus.unsplash.com/premium_photo-1667538962342-2d9937f014d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            alt="camera photo">
-          <div class="p-6 flex flex-col grow">
-            <h2 class="text-xl font-semibold mb-3 text-gray-800">Lorem ipsum dolor</h2>
-            <p class="text-gray-600 mb-6 text-sm leading-relaxed grow">Pellentesque ac bibendum tortor, vel blandit
-              nulla. Nulla eget lobortis lacus. Eu aliquam nibh tempus at.</p>
-            <div class="flex justify-center mt-auto">
+            alt="camera photo" />
+          <div class="flex grow flex-col p-6">
+            <h2 class="mb-3 text-xl font-semibold text-gray-800">
+              Lorem ipsum dolor
+            </h2>
+            <p class="mb-6 grow text-sm leading-relaxed text-gray-600">
+              Pellentesque ac bibendum tortor, vel blandit nulla. Nulla eget
+              lobortis lacus. Eu aliquam nibh tempus at.
+            </p>
+            <div class="mt-auto flex justify-center">
               <button
-                class="bg-white border border-blue-900 text-blue-500 px-12 py-2 rounded-md font-medium hover:bg-[#00BCD4] hover:text-white transition-colors uppercase text-sm">See
-                Detail
+                class="rounded-md border border-blue-900 bg-white px-12 py-2 text-sm font-medium text-blue-500 uppercase transition-colors hover:bg-[#00BCD4] hover:text-white">
+                See Detail
               </button>
             </div>
           </div>
         </div>
         <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
-          <img class="w-full h-48 object-cover block m-0 p-0"
+          class="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+          <img class="m-0 block h-48 w-full object-cover p-0"
             src="https://plus.unsplash.com/premium_photo-1667538962342-2d9937f014d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            alt="camera photo">
-          <div class="p-6 flex flex-col grow">
-            <h2 class="text-xl font-semibold mb-3 text-gray-800">Lorem ipsum dolor</h2>
-            <p class="text-gray-600 mb-6 text-sm leading-relaxed grow">Pellentesque ac bibendum tortor, vel blandit
-              nulla. Nulla eget lobortis lacus. Eu aliquam nibh tempus at.</p>
-            <div class="flex justify-center mt-auto">
+            alt="camera photo" />
+          <div class="flex grow flex-col p-6">
+            <h2 class="mb-3 text-xl font-semibold text-gray-800">
+              Lorem ipsum dolor
+            </h2>
+            <p class="mb-6 grow text-sm leading-relaxed text-gray-600">
+              Pellentesque ac bibendum tortor, vel blandit nulla. Nulla eget
+              lobortis lacus. Eu aliquam nibh tempus at.
+            </p>
+            <div class="mt-auto flex justify-center">
               <button
-                class="bg-white border border-blue-900 text-blue-500 px-12 py-2 rounded-md font-medium hover:bg-[#00BCD4] hover:text-white transition-colors uppercase text-sm">See
-                Detail
+                class="rounded-md border border-blue-900 bg-white px-12 py-2 text-sm font-medium text-blue-500 uppercase transition-colors hover:bg-[#00BCD4] hover:text-white">
+                See Detail
               </button>
             </div>
           </div>
         </div>
         <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
-          <img class="w-full h-48 object-cover block m-0 p-0"
+          class="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+          <img class="m-0 block h-48 w-full object-cover p-0"
             src="https://plus.unsplash.com/premium_photo-1667538962342-2d9937f014d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            alt="camera photo">
-          <div class="p-6 flex flex-col grow">
-            <h2 class="text-xl font-semibold mb-3 text-gray-800">Lorem ipsum dolor</h2>
-            <p class="text-gray-600 mb-6 text-sm leading-relaxed grow">Pellentesque ac bibendum tortor, vel blandit
-              nulla. Nulla eget lobortis lacus. Eu aliquam nibh tempus at.</p>
-            <div class="flex justify-center mt-auto">
+            alt="camera photo" />
+          <div class="flex grow flex-col p-6">
+            <h2 class="mb-3 text-xl font-semibold text-gray-800">
+              Lorem ipsum dolor
+            </h2>
+            <p class="mb-6 grow text-sm leading-relaxed text-gray-600">
+              Pellentesque ac bibendum tortor, vel blandit nulla. Nulla eget
+              lobortis lacus. Eu aliquam nibh tempus at.
+            </p>
+            <div class="mt-auto flex justify-center">
               <button
-                class="bg-white border border-blue-900 text-blue-500 px-12 py-2 rounded-md font-medium hover:bg-[#00BCD4] hover:text-white transition-colors uppercase text-sm">See
-                Detail
+                class="rounded-md border border-blue-900 bg-white px-12 py-2 text-sm font-medium text-blue-500 uppercase transition-colors hover:bg-[#00BCD4] hover:text-white">
+                See Detail
               </button>
             </div>
           </div>
         </div>
         <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
-          <img class="w-full h-48 object-cover block m-0 p-0"
+          class="flex flex-col overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg">
+          <img class="m-0 block h-48 w-full object-cover p-0"
             src="https://plus.unsplash.com/premium_photo-1667538962342-2d9937f014d9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            alt="camera photo">
-          <div class="p-6 flex flex-col grow">
-            <h2 class="text-xl font-semibold mb-3 text-gray-800">Lorem ipsum dolor</h2>
-            <p class="text-gray-600 mb-6 text-sm leading-relaxed grow">Pellentesque ac bibendum tortor, vel blandit
-              nulla. Nulla eget lobortis lacus. Eu aliquam nibh tempus at.</p>
-            <div class="flex justify-center mt-auto">
+            alt="camera photo" />
+          <div class="flex grow flex-col p-6">
+            <h2 class="mb-3 text-xl font-semibold text-gray-800">
+              Lorem ipsum dolor
+            </h2>
+            <p class="mb-6 grow text-sm leading-relaxed text-gray-600">
+              Pellentesque ac bibendum tortor, vel blandit nulla. Nulla eget
+              lobortis lacus. Eu aliquam nibh tempus at.
+            </p>
+            <div class="mt-auto flex justify-center">
               <button
-                class="bg-white border border-blue-900 text-blue-500 px-12 py-2 rounded-md font-medium hover:bg-[#00BCD4] hover:text-white transition-colors uppercase text-sm">See
-                Detail
+                class="rounded-md border border-blue-900 bg-white px-12 py-2 text-sm font-medium text-blue-500 uppercase transition-colors hover:bg-[#00BCD4] hover:text-white">
+                See Detail
               </button>
             </div>
           </div>
@@ -252,18 +318,18 @@
       </div>
 
       <!-- icon forward and backward section-->
-      <div class="flex gap-4 justify-end px-5 pb-5">
+      <div class="flex justify-end gap-4 px-5 pb-5">
         <button
-          class="p-2 border border-white rounded bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors">
+          class="cursor-pointer rounded border border-white bg-white/20 p-2 backdrop-blur-sm transition-colors hover:bg-white/30">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
-            class="w-6 h-6">
+            class="h-6 w-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
           </svg>
         </button>
         <button
-          class="p-2 border border-white rounded bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors">
+          class="cursor-pointer rounded border border-white bg-white/20 p-2 backdrop-blur-sm transition-colors hover:bg-white/30">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
-            class="w-6 h-6">
+            class="h-6 w-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
           </svg>
         </button>
@@ -272,39 +338,42 @@
   </section>
 
   <!-- Our values section -->
-  <section class=" container mx-auto  flex w-full px-5 py-12 mb-10 items-center">
+  <section class="container mx-auto mb-10 flex w-full items-center px-5 py-12">
     <div>
-      <img src="./public/images/Illustration & Title.png" alt="Illustration & Title">
+      <img src="./public/images/Illustration & Title.png" alt="Illustration & Title" />
     </div>
     <div>
       <div class="mb-10">
-        <h2 class="text-2xl font-medium">Nulla lobortis nunc vitae nisi semper velit</h2>
-        <p class="text-gray-600">Vestibulum sit amet tortor libero lobortis semper at et odio. In eu tellus tellus.
-          <br>Pellentesque ullamcorper
-          ultrices. Aenean facilisis vitae purus facilisis semper.
+        <h2 class="pb-4 text-2xl font-medium">
+          Nulla lobortis nunc vitae nisi semper velit
+        </h2>
+        <p class="text-gray-600">
+          Vestibulum sit amet tortor libero lobortis semper at et odio. In eu
+          tellus tellus. <br />Pellentesque ullamcorper ultrices. Aenean
+          facilisis vitae purus facilisis semper.
         </p>
       </div>
-      <section class="flex gap-10 mb-10">
+      <section class="mb-10 flex gap-10">
         <div>
-          <img src="#" alt="">
+          <img src="#" alt="" />
           <h2>Nulla lobortis nunc</h2>
           <p>Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
         </div>
         <div>
-          <img src="#" alt="">
+          <img src="#" alt="" />
           <h2>Nulla lobortis nunc</h2>
           <p>Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
         </div>
       </section>
       <section class="flex gap-10">
         <div>
-          <img src="#" alt="">
+          <img src="#" alt="" />
           <h2>Nulla lobortis nunc</h2>
           <p>Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
         </div>
 
         <div>
-          <img src="#" alt="">
+          <img src="#" alt="" />
           <h2>Nulla lobortis nunc</h2>
           <p>Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
         </div>
@@ -312,35 +381,36 @@
     </div>
   </section>
 
-
-
   <!-- Client Testimonials Section -->
-  <section class="w-full px-5 py-12 bg-cover bg-center bg-no-repeat mb-10" style="background-image: url('#');">
+  <section class="mb-10 w-full bg-cover bg-center bg-no-repeat px-5 py-12" style="background-image: url(&quot;#&quot;)">
     <div class="container mx-auto">
       <!-- 3 card section selection is not possible here in figma so i'm moving in my style-->
-      <h2 class="text-4xl font-bold mb-10 text-sky-500">Client Testimonials</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-
+      <h2 class="mb-10 text-4xl font-bold text-sky-500">
+        Client Testimonials
+      </h2>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3">
         <div class="flex flex-col items-start">
           <div
-            class="bg-white border border-gray-300 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none shadow-lg p-8 flex flex-col gap-6">
-            <p class="text-gray-700 leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur id facilis eveniet aliquam ipsum odit
-              commodi voluptates architecto perferendis, hic quasi? Aperiam perspiciatis aliquam dolorem sit ipsum
-              delectus
-              necessitatibus repudiandae.</p>
+            class="flex flex-col gap-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none border border-gray-300 bg-white p-8 shadow-lg">
+            <p class="text-base leading-relaxed text-gray-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur id facilis eveniet aliquam ipsum odit commodi
+              voluptates architecto perferendis, hic quasi? Aperiam
+              perspiciatis aliquam dolorem sit ipsum delectus necessitatibus
+              repudiandae.
+            </p>
             <div class="flex gap-1">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
             </div>
           </div>
-          <div class="flex items-center gap-4 mt-4">
+          <div class="mt-4 flex items-center gap-4">
             <img
               src="https://plus.unsplash.com/premium_photo-1677368597077-009727e906db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYxfHxoZWFkc2hvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
-              alt="Client Image" class="w-16 h-16 rounded-full object-cover">
+              alt="Client Image" class="h-16 w-16 rounded-full object-cover" />
             <div>
               <p class="font-semibold text-gray-800">Jane Doe</p>
               <p class="text-sm text-gray-500">Chief Digital Officer</p>
@@ -349,24 +419,26 @@
         </div>
         <div class="flex flex-col items-start">
           <div
-            class="bg-white border border-gray-300 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none shadow-lg p-8 flex flex-col gap-6">
-            <p class="text-gray-700 leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur id facilis eveniet aliquam ipsum odit
-              commodi voluptates architecto perferendis, hic quasi? Aperiam perspiciatis aliquam dolorem sit ipsum
-              delectus
-              necessitatibus repudiandae.</p>
+            class="flex flex-col gap-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none border border-gray-300 bg-white p-8 shadow-lg">
+            <p class="text-base leading-relaxed text-gray-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur id facilis eveniet aliquam ipsum odit commodi
+              voluptates architecto perferendis, hic quasi? Aperiam
+              perspiciatis aliquam dolorem sit ipsum delectus necessitatibus
+              repudiandae.
+            </p>
             <div class="flex gap-1">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
             </div>
           </div>
-          <div class="flex items-center gap-4 mt-4">
+          <div class="mt-4 flex items-center gap-4">
             <img
               src="https://plus.unsplash.com/premium_photo-1677368597077-009727e906db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYxfHxoZWFkc2hvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
-              alt="Client Image" class="w-16 h-16 rounded-full object-cover">
+              alt="Client Image" class="h-16 w-16 rounded-full object-cover" />
             <div>
               <p class="font-semibold text-gray-800">Jane Doe</p>
               <p class="text-sm text-gray-500">Chief Digital Officer</p>
@@ -375,204 +447,232 @@
         </div>
         <div class="flex flex-col items-start">
           <div
-            class="bg-white border border-gray-300 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none shadow-lg p-8 flex flex-col gap-6">
-            <p class="text-gray-700 leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur id facilis eveniet aliquam ipsum odit
-              commodi voluptates architecto perferendis, hic quasi? Aperiam perspiciatis aliquam dolorem sit ipsum
-              delectus
-              necessitatibus repudiandae.</p>
+            class="flex flex-col gap-6 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none border border-gray-300 bg-white p-8 shadow-lg">
+            <p class="text-base leading-relaxed text-gray-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur id facilis eveniet aliquam ipsum odit commodi
+              voluptates architecto perferendis, hic quasi? Aperiam
+              perspiciatis aliquam dolorem sit ipsum delectus necessitatibus
+              repudiandae.
+            </p>
             <div class="flex gap-1">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
-              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="w-5 h-5">
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
+              <img src="./public/images/star-svgrepo-com.svg" alt="Star Icon" class="h-5 w-5" />
             </div>
           </div>
-          <div class="flex items-center gap-4 mt-4">
+          <div class="mt-4 flex items-center gap-4">
             <img
               src="https://plus.unsplash.com/premium_photo-1677368597077-009727e906db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYxfHxoZWFkc2hvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500"
-              alt="Client Image" class="w-16 h-16 rounded-full object-cover">
+              alt="Client Image" class="h-16 w-16 rounded-full object-cover" />
             <div>
               <p class="font-semibold text-gray-800">Jane Doe</p>
               <p class="text-sm text-gray-500">Chief Digital Officer</p>
             </div>
-
           </div>
         </div>
       </div>
+    </div>
   </section>
-
 
   <!-- company logo list section -> flex mode -> 6 logos in a row -->
   <section class="w-full px-5 py-8">
     <div class="container mx-auto">
-      <div class="flex justify-center gap-5 overflow-x-auto md:overflow-x-visible scroll-smooth pb-4">
+      <div class="flex justify-center gap-5 overflow-x-auto scroll-smooth pb-4 md:overflow-x-visible">
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
         <div>
-          <img src="./public/images/svgviewer-output.svg" alt="">
+          <img src="./public/images/svgviewer-output.svg" alt="" />
         </div>
+      </div>
+    </div>
   </section>
 
   <!-- case study section -->
   <!-- A list and grid images display section here -->
 
-  <section class="max-w-7xl mx-auto py-20 px-6 flex flex-col lg:flex-row items-start gap-12">
+  <section class="mx-auto flex max-w-7xl flex-col items-start gap-12 px-6 py-20 lg:flex-row">
     <!-- Left Column -->
     <div class="lg:w-1/6">
-      <h2 class="text-5xl font-extrabold text-sky-500 whitespace-nowrap">Case <br> Studies</h2>
-      <div class="flex flex-col gap-3 mt-6 w-fit">
-        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
-          data-category="all">All</button>
-        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
-          data-category="corporate">Corporate</button>
-        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
-          data-category="advertising">Advertising</button>
-        <button class="btn-case px-4 py-2 rounded-lg  hover:bg-blue-50 transition-colors duration-200"
-          data-category="marketing">Marketing</button>
-        <button class="btn-case px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors duration-200"
-          data-category="government">Government</button>
+      <h2 class="text-5xl font-extrabold whitespace-nowrap text-sky-500">
+        Case <br />
+        Studies
+      </h2>
+      <div class="mt-6 flex w-fit flex-col gap-3">
+        <button class="btn-case rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-blue-50"
+          data-category="all">
+          All
+        </button>
+        <button class="btn-case rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-blue-50"
+          data-category="corporate">
+          Corporate
+        </button>
+        <button class="btn-case rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-blue-50"
+          data-category="advertising">
+          Advertising
+        </button>
+        <button class="btn-case rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-blue-50"
+          data-category="marketing">
+          Marketing
+        </button>
+        <button class="btn-case rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-blue-50"
+          data-category="government">
+          Government
+        </button>
       </div>
     </div>
 
     <!-- Right Column -->
-    <div class="lg:w-5/6 w-full">
-      <div class="grid grid-cols-2 grid-rows-3 gap-4 h-[400px]">
-        <div class="row-span-2 relative overflow-hidden rounded-lg h-full">
-          <img src="https://picsum.photos/600/400?random=1" class="w-full h-full object-cover brightness-75">
-          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-trom-black/60">
+    <div class="w-full lg:w-5/6">
+      <div class="grid h-[400px] grid-cols-2 grid-rows-3 gap-4">
+        <div class="relative row-span-2 h-full overflow-hidden rounded-lg">
+          <img src="https://picsum.photos/600/400?random=1" class="h-full w-full object-cover brightness-75" />
+          <div class="bg-linear-to-trom-black/60 absolute inset-x-0 bottom-0 p-3">
             <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
-            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+            <p class="text-xs text-gray-300">
+              Vestibulum consequat hendrerit
+            </p>
           </div>
         </div>
-        <div class="relative overflow-hidden rounded-lg h-full">
-          <img src="https://picsum.photos/600/400?random=2" class="w-full h-full object-cover brightness-75">
-          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-t from-black/60">
+        <div class="relative h-full overflow-hidden rounded-lg">
+          <img src="https://picsum.photos/600/400?random=2" class="h-full w-full object-cover brightness-75" />
+          <div class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/60 p-3">
             <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
-            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+            <p class="text-xs text-gray-300">
+              Vestibulum consequat hendrerit
+            </p>
           </div>
         </div>
-        <div class="col-start-2 relative overflow-hidden rounded-lg h-full">
-          <img src="https://picsum.photos/600/400?random=3" class="w-full h-full object-cover brightness-75">
-          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-trom-black/60">
+        <div class="relative col-start-2 h-full overflow-hidden rounded-lg">
+          <img src="https://picsum.photos/600/400?random=3" class="h-full w-full object-cover brightness-75" />
+          <div class="bg-linear-to-trom-black/60 absolute inset-x-0 bottom-0 p-3">
             <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
-            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+            <p class="text-xs text-gray-300">
+              Vestibulum consequat hendrerit
+            </p>
           </div>
         </div>
-        <div class="col-start-2 row-start-3 relative overflow-hidden rounded-lg h-full">
-          <img src="https://picsum.photos/600/400?random=4" class="w-full h-full object-cover brightness-75">
-          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-t from-black/60">
+        <div class="relative col-start-2 row-start-3 h-full overflow-hidden rounded-lg">
+          <img src="https://picsum.photos/600/400?random=4" class="h-full w-full object-cover brightness-75" />
+          <div class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/60 p-3">
             <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
-            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+            <p class="text-xs text-gray-300">
+              Vestibulum consequat hendrerit
+            </p>
           </div>
         </div>
-        <div class="col-start-1 row-start-3 relative overflow-hidden rounded-lg h-full">
-          <img src="https://picsum.photos/600/400?random=5" class="w-full h-full object-cover brightness-75">
-          <div class="absolute inset-x-0 bottom-0 p-3 bg-linear-to-t from-black/60">
+        <div class="relative col-start-1 row-start-3 h-full overflow-hidden rounded-lg">
+          <img src="https://picsum.photos/600/400?random=5" class="h-full w-full object-cover brightness-75" />
+          <div class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/60 p-3">
             <h3 class="font-semibold text-white">Lorem Ipsum dolor</h3>
-            <p class="text-xs text-gray-300">Vestibulum consequat hendrerit</p>
+            <p class="text-xs text-gray-300">
+              Vestibulum consequat hendrerit
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-
   <!-- Call-to-action section -->
-  <section class="bg-gradient-to-r from-sky-400 to-sky-600 py-6 px-6 w-4/5 mx-auto rounded-lg">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+  <section class="mx-auto w-4/5 rounded-lg bg-gradient-to-r from-sky-400 to-sky-600 px-6 py-6">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
       <div class="text-center sm:text-left">
-        <h2 class="text-3xl font-semibold text-white mb-1">Let's work together</h2>
-        <p class="text-white text-base">Contact our team today.</p>
+        <h2 class="mb-1 text-3xl font-semibold text-white">
+          Let's work together
+        </h2>
+        <p class="text-base text-white">Contact our team today.</p>
       </div>
       <button
-        class="bg-white text-blue-600 px-6 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center gap-2 whitespace-nowrap">
+        class="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-2.5 font-semibold whitespace-nowrap text-blue-600 transition-colors duration-200 hover:bg-gray-100">
         Write to us
-        <img src="./public/images/android-send.svg" alt="Send icon" class="w-5 h-5" />
+        <img src="./public/images/android-send.svg" alt="Send icon" class="h-5 w-5" />
       </button>
     </div>
   </section>
 
-
   <!-- footer section -->
-  <footer class="bg-white text-black-300 py-20 relative overflow-hidden">
-
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
-
+  <footer class="text-black-300 relative overflow-hidden bg-white py-20">
+    <div class="relative z-10 container mx-auto px-4">
+      <div class="flex flex-col items-start justify-between gap-12 lg:flex-row">
         <div class="w-full lg:max-w-xs">
-          <div class="flex gap-2  items-center mb-4">
+          <div class="mb-4 flex items-center gap-2">
             <img src="./public/images/Logo.svg" alt="Agency Logo" />
             <p>Agency</p>
           </div>
-          <p class="text-sm text-gray-400 mb-6">
-            Nam posuere nulla id orci sed ante blandit, id feugiat elit. amet sed libero.
+          <p class="mb-6 text-sm text-gray-400">
+            Nam posuere nulla id orci sed ante blandit, id feugiat elit. amet
+            sed libero.
           </p>
           <p class="text-sm text-gray-500">© Skyrer Theme 2020</p>
         </div>
 
-        <div class="w-full lg:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="grid w-full grid-cols-2 gap-8 md:grid-cols-3 lg:w-1/2">
           <div>
-            <h3 class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Company</h3>
+            <h3 class="mb-4 text-sm font-bold tracking-wider text-blue-400 uppercase">
+              Company
+            </h3>
           </div>
           <div>
-            <h3 class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Services</h3>
+            <h3 class="mb-4 text-sm font-bold tracking-wider text-blue-400 uppercase">
+              Services
+            </h3>
           </div>
           <div>
-            <h3 class="text-blue-400 font-bold uppercase tracking-wider text-sm mb-4">Resources</h3>
+            <h3 class="mb-4 text-sm font-bold tracking-wider text-blue-400 uppercase">
+              Resources
+            </h3>
           </div>
         </div>
 
-        <div class="w-full lg:w-auto flex flex-col items-start lg:items-end">
-          <div class="flex space-x-3 mb-6">
+        <div class="flex w-full flex-col items-start lg:w-auto lg:items-end">
+          <div class="mb-6 flex space-x-3">
             <a href="#"
-              class="w-9 h-9 rounded-full flex items-center justify-center bg-gray-200 text-blue-700 hover:bg-gray-300 transition-colors"
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-gray-200 text-blue-700 transition-colors hover:bg-gray-300"
               aria-label="Facebook">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0Z" />
               </svg>
             </a>
             <a href="#"
-              class="w-9 h-9 rounded-full flex items-center justify-center bg-cyan-600 text-white hover:bg-cyan-700 transition-colors"
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-600 text-white transition-colors hover:bg-cyan-700"
               aria-label="LinkedIn">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5ZM8 19H5V8h3v11ZM6.5 6.5A1.5 1.5 0 1 1 8 5a1.5 1.5 0 0 1-1.5 1.5ZM19 19h-3v-5.5c0-1.32-.03-3.02-1.84-3.02-1.84 0-2.12 1.44-2.12 2.92V19H9V8h2.88v1.32h.04c.4-.76 1.38-1.56 2.84-1.56 3.03 0 3.59 1.99 3.59 4.58V19Z" />
               </svg>
             </a>
             <a href="#"
-              class="w-9 h-9 rounded-full flex items-center justify-center bg-cyan-600 text-white hover:bg-cyan-700 transition-colors"
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-600 text-white transition-colors hover:bg-cyan-700"
               aria-label="Twitter">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 14.01-7.496 14.01-13.986 0-.213-.005-.426-.015-.638.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
               </svg>
             </a>
             <a href="#"
-              class="w-9 h-9 rounded-full flex items-center justify-center bg-cyan-600 text-white hover:bg-cyan-700 transition-colors"
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-600 text-white transition-colors hover:bg-cyan-700"
               aria-label="Instagram">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 1.172.053 1.803.248 2.228.413.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.426.36 1.057.413 2.228.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.172-.248 1.803-.413 2.228-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.426.164-1.057.36-2.228.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.172-.053-1.803-.248-2.228-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.426-.36-1.057-.413-2.228-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.172.248-1.803.413-2.228.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.426-.164 1.057-.36 2.228-.413 1.266-.058 1.646-.07 4.85-.07M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.936 3.351.63 4.14C.333 4.905.131 5.775.072 7.053.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126s1.338.936 2.126 1.384c.766.296 1.636.499 2.913.558C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.148-.261 2.913-.558.788-.306 1.459-.717 2.126-1.384s.936-1.338 1.384-2.126c.296-.765.499-1.636.558-2.913.058-1.28.072-1.687.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.261-2.148-.558-2.913-.306-.788-.717-1.459-1.384-2.126S20.649.936 19.861.63c-.765-.297-1.636-.499-2.913-.558C15.667.014 15.26 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z" />
               </svg>
@@ -581,14 +681,14 @@
 
           <div class="relative">
             <button
-              class="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              class="flex items-center space-x-2 rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-800">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
               <span>English - En</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
